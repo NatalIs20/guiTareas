@@ -11,8 +11,11 @@ body {
     border-radius: 15px;
     background-color: #ffffff;
     padding: 20px;
+    max-width: 500px;
+    margin: 20px auto;
 }
 
+/* Estilo para el título */
 h3 {
     color: #007bff;
     font-weight: bold;
@@ -23,6 +26,7 @@ input[type="text"] {
     border-radius: 8px;
     padding: 10px;
     border: 1px solid #ccc;
+    width: 100%;
 }
 
 input[type="text"]:focus {
@@ -39,6 +43,7 @@ button {
     padding: 10px;
     font-size: 16px;
     cursor: pointer;
+    width: 100%;
 }
 
 button:hover {
@@ -73,6 +78,7 @@ tr:hover {
     background-color: #e9ecef;
 }
 
+/* Botones de acción en las celdas */
 td button {
     border-radius: 50%;
     padding: 5px 10px;
@@ -94,4 +100,29 @@ td button.edit-btn:hover {
 
 td button.delete-btn:hover {
     background-color: #c82333;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    /* Ajuste del contenedor para pantallas pequeñas */
+    .card {
+        width: 100%;
+        padding: 15px;
+    }
+
+    /* Alineación de los botones de acción en dispositivos pequeños */
+    td button {
+        padding: 5px 8px;
+        font-size: 14px;
+    }
+
+    /* Ocultar algunas columnas en teléfonos para simplificar */
+    th:nth-child(3), td:nth-child(3) { /* Oculta la columna de Descripción */
+        display: none;
+    }
+
+    /* Ajustar el padding y los márgenes de la tabla */
+    th, td {
+        padding: 10px;
+    }
 }
